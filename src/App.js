@@ -67,7 +67,9 @@ class App extends Component {
           toggleClick={this.toggleClick.bind(this)}
         />
 
-        <Footer counter={this.itemsLeftCount()}/>
+         {this.state.todos.length === 0 ? null : <Footer counter={this.itemsLeftCount()}/>}
+
+
       </section>
     );
   }
